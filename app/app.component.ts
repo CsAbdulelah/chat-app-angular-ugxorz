@@ -17,7 +17,7 @@ import { ChatService } from './chat.service';
   providers: [ChatService],
   selector: 'my-app',
   template: `
-  <img src="logoChatGPT.png" alt="img">
+  <img src='logoChatGPT.png'>
 <kendo-chat
 [messages]="feed | async"
 [user]="user"
@@ -73,5 +73,6 @@ export class AppComponent {
     });
 
     this.svc.sendMessage(e.message.text);
+    console.log(e.message.text);
   }
 }
